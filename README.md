@@ -1,28 +1,75 @@
-== README
+# RecipeFilter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Recipe Filter | UP CSI 2 | Hackathon Training 01
 
-Things you may want to cover:
+### Dependencies
 
-* Ruby version
+Install the following dependencies:
 
-* System dependencies
+1. Git
+2. SQLite
+3. Node
+4. Rbenv
+5. Ruby
+6. Rails
+7. Bundle
 
-* Configuration
+#### ElementaryOS/Ubuntu:
 
-* Database creation
+Install Git, Postgres, Node:
+```bash
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install libssl-dev
+sudo apt-get install git nodejs
+```
 
-* Database initialization
+Note: If this is your first time on git, it's advisable to configure your credentials first:
+```bash
+git config --global user.name "Neil Calabroso"
+git config --global user.email "nmcalabroso@up.edu.ph"
+```
 
-* How to run the test suite
+Install Rbenv:
 
-* Services (job queues, cache servers, search engines, etc.)
+See ```https://github.com/sstephenson/rbenv``` and complete the installation instructions including the optional part:```ruby-build```.
 
-* Deployment instructions
+Upon installing ```rbenv```, install Ruby 2.2.0:
+```bash
+rbenv install 2.2.0
+rbenv global 2.2.0
+rbenv local 2.2.0
+```
 
-* ...
+Install Rails:
+```bash
+gem install rails
+```
 
+Install Bundler:
+```bash
+gem install bundler
+```
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Development Environment
+
+1. Clone our repository to your own directory.
+2. In the terminal, go to the root of the project directory.
+3. Run ```bundle install```.
+4. Run ```rake db:create```.
+5. Run ```rake db:migrate```.
+7. Run ```rake db:seed```.
+7. Run ```rails server```.
+8. Using your browser, go to ```http://localhost:3000```.
+
+Note:
+Please make sure that your ruby version is 2.2.0 where the project was cloned.
+You can check the version using the command ```ruby -v```. If it is not, try
+to use ```rbenv local 2.2.0``` while you are in that directory. Check again.
+
+### Further Notes
+
+For a high quality and readable codebase, please make these conventions as references:
+
+1. Ruby Style Guide ```https://github.com/bbatsov/ruby-style-guide```
+2. Rails Style Guide ```https://github.com/bbatsov/rails-style-guide```
