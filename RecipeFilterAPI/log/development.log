@@ -1,0 +1,87 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-29 01:46:44 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neil/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.4ms)
+Completed 200 OK in 56ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-29 01:49:04 +0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.slim within layouts/application (7.4ms)
+Completed 200 OK in 4295ms (Views: 4294.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides-dc66a0bca55fdbd6be837d847d962df6.css?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/application-0843cbf7294e19519cec6236ce612f56.css?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/jquery-ea2706bc2d0586731b7c00ec2cd0a414.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/vendor/modernizr-d804d6b1ab4eadb8fb48af61a74096e6.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation-ece7e00cdd054357f30fbc2a5a4e3c30.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/jquery_ujs-99f13489684e179b71ca7517fb74318d.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.abide-2ec530cd06c78b471a0bda9dcbaba353.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.accordion-3d04bf508a9418fdc81cd5c7d0a1c49d.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.alert-650042c6860b24bb872463c8b3f8aa8c.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.dropdown-51a6f3e403182c0631c04b4ed672b6aa.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.clearing-0aec5bed7e891190d8a008ce5d7315e7.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.interchange-51c1f69e58ac915261c2f19939a6ffc8.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.joyride-8b61d0d3ff7ac6df603f7309d3a86fb9.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.magellan-03b9c678f8797176264e917ce34331bd.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.offcanvas-29588b3b2cc818691e87dc5dcd2cf2d2.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.orbit-20cb4e9c7259b06ea11dbe71f058f502.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.reveal-dcfe4d3df1f6f19988ff7e6a27a9f5cb.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.slider-02784fa4e40cec8a79e0cd398154fe13.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.tab-e1ee77678dc79b9e0325d678cdbcc0b9.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.tooltip-11a5f22deb5107bd8d056a4a92547d92.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.topbar-03679c9351cf106176ad8fcf9726843d.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation/foundation.equalizer-2426b7ac654d73d1baf2fddfb072f8a5.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/foundation-d72e2180e40189136db6ab13d1e7ceae.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/turbolinks-924184401b7d116eadaaefc96895fa84.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
+
+
+Started GET "/assets/application-47386b8169c0101bc365a3c36b5086f3.js?body=1" for 127.0.0.1 at 2014-12-29 01:49:08 +0800
