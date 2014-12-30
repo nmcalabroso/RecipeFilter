@@ -2,6 +2,10 @@
 
 ## Recipe Filter | UP CSI 2 | Hackathon Training 01
 
+### RecipeFilter API
+Set-up first the API server of the application. This subproject serves as the back-end
+of the whole RecipeFilter app.
+
 ### Dependencies
 
 Install the following dependencies:
@@ -54,18 +58,20 @@ gem install bundler
 ### Development Environment
 
 1. Clone our repository to your own directory.
-2. In the terminal, go to the root of the project directory.
+2. In the terminal, go to ```RecipeFilterAPI``` directory.
 3. Run ```bundle install```.
 4. Run ```rake db:create```.
 5. Run ```rake db:migrate```.
-7. Run ```rake db:seed```.
+6. Run ```rake db:seed```.
 7. Run ```rails server```.
-8. Using your browser, go to ```http://localhost:3000```.
 
 Note:
 Please make sure that your ruby version is 2.2.0 where the project was cloned.
 You can check the version using the command ```ruby -v```. If it is not, try
 to use ```rbenv local 2.2.0``` while you are in that directory. Check again.
+
+### RecipeFilterClient
+-- Guide coming soon.
 
 ### Further Notes
 
