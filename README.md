@@ -71,7 +71,29 @@ You can check the version using the command ```ruby -v```. If it is not, try
 to use ```rbenv local 2.2.0``` while you are in that directory. Check again.
 
 ### RecipeFilterClient
--- Guide coming soon.
+
+Update npm.
+```bash
+sudo npm cache clean -f
+sudo npm install -g n
+```
+
+Install ember-cli and its dependencies.
+```bash
+sudo npm install ember-cli -g
+sudo npm install -g bower           # package manager for front-end dependencies
+sudo npm install -g phantomjs       # for integration tests
+```
+
+Clear the cache.
+```bash
+sudo npm cache clean
+```
+
+You can start the app using the following command.
+```bash
+ember serve                             # view on localhost:4200
+```
 
 ### Further Notes
 
