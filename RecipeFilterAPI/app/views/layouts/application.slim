@@ -5,12 +5,6 @@ html lang="en"
     meta content="width=device-width, initial-scale=1.0" name="viewport" /
     title= content_for?(:title) ? yield(:title) : 'RecipeFilter'
     = stylesheet_link_tag 'application'
-    style
-      = yield :stylesheets
-    = javascript_include_tag 'vendor/modernizr'
     = csrf_meta_tags
   body
     = yield
-    script
-      = yield :javascripts
-    = javascript_include_tag 'application'

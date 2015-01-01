@@ -6,4 +6,13 @@ class Api:UsersController < Api::ApplicationController
   def index
     respond_with current_user
   end
+
+  def create
+
+  end
+
+  private
+    def user_params
+      
+    end
 end
