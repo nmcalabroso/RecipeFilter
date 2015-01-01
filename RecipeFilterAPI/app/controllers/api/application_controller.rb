@@ -4,7 +4,8 @@ class Api::ApplicationController < ApplicationController
   private
   def require_user
     unless current_user
-      render(:json => {:message => 'Authentication required.'}, :status => 401)
+      render(json: {message: 'Authentication required.'},
+                    status: :unauthorized)
       return false
     end
   end
