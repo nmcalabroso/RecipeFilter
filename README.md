@@ -11,7 +11,7 @@ of the whole RecipeFilter app.
 Install the following dependencies:
 
 1. Git
-2. SQLite
+2. PostgreSQL
 3. Node
 4. Rbenv
 5. Ruby
@@ -25,6 +25,7 @@ Install Git, Postgres, Node:
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install libssl-dev
+sudo apt-get install postgresql libpq5 libpq-dev
 sudo apt-get install git nodejs
 ```
 
@@ -54,6 +55,19 @@ Install Bundler:
 ```bash
 gem install bundler
 ```
+
+### Database
+Create a Postgres user for the Rails app we'll create in the next step. To do this, switch into the Postgres user:
+```
+sudo -u postgres psql postgres
+```
+
+Then create a user (or a "role", as Postgres calls it):
+```
+create role "recipefilter" with createdb login password 'recipefilter';
+```
+
+Quit the postgre REPL by typing ```\q```.
 
 ### Development Environment
 
