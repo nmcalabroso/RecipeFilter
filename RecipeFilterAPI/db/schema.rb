@@ -11,6 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150101092757) do
+
+  create_table "users", force: :cascade do |t|
+    t.string   "login",               null: false
+    t.string   "crypted_password",    null: false
+    t.string   "password_salt",       null: false
+    t.string   "persistence_token",   null: false
+    t.string   "single_access_token", null: false
+    t.string   "perishable_token",    null: false
+    t.datetime "current_login_at"
+    t.string   "current_login_ip"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
 end
