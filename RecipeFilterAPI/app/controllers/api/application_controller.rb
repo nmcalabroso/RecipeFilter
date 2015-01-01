@@ -6,7 +6,6 @@ class Api::ApplicationController < ApplicationController
     unless current_user
       render(json: {message: 'Authentication required.'},
                     status: :unauthorized)
-      return false
     end
   end
 end
