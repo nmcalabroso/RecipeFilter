@@ -94,6 +94,8 @@ You can start the app using the following command.
 ```bash
 ember serve                             # view on localhost:4200
 ```
+### API Documentation
+Please see this [document](https://docs.google.com/spreadsheets/d/1Xxr3Op3GrXQ-Z8cwgBjLelSu1vRyhwFq4ivBjnlUlOA/edit?usp=sharing).
 
 ### Further Notes
 
