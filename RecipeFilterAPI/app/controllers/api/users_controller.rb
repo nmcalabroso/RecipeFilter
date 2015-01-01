@@ -1,5 +1,4 @@
-class Api:UsersController < Api::ApplicationController
-  respond_to :json
+class Api::UsersController < Api::ApplicationController
 
   def create
     @user = User.new(user_params)
@@ -14,6 +13,6 @@ class Api:UsersController < Api::ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:login, :password, :name)
+      params.require(:user).permit(:login, :password, :name, :age)
     end
 end

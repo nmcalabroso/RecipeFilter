@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150101123020) do
+ActiveRecord::Schema.define(version: 20150101144804) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "recipes", force: :cascade do |t|
+    t.string  "name"
+    t.text    "description"
+    t.integer "user_id"
+  end
+
+  add_index "recipes", ["user_id"], name: "index_recipes_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "login",               null: false
@@ -28,6 +39,7 @@ ActiveRecord::Schema.define(version: 20150101123020) do
     t.integer  "age"
   end
 
-  add_index "users", ["name"], name: "index_users_on_name"
+  add_index "users", ["login"], name: "index_users_on_login", unique: true, using: :btree
+  add_index "users", ["name"], name: "index_users_on_name", using: :btree
 
 end
