@@ -29,7 +29,7 @@ sudo apt-get install postgresql libpq5 libpq-dev
 sudo apt-get install git nodejs
 ```
 
-Note: If this is your first time on git, it's advisable to configure your credentials first:
+Note: If this is your first time on git, it is advisable to configure your credentials first:
 ```bash
 git config --global user.name "Neil Calabroso"
 git config --global user.email "nmcalabroso@up.edu.ph"
@@ -57,7 +57,7 @@ gem install bundler
 ```
 
 ### Database
-Create a Postgres user for the Rails app we'll create in the next step. To do this, switch into the Postgres user:
+Create a Postgres user for the Rails app that we will create in the next step. To do this, switch into the Postgres user:
 ```
 sudo -u postgres psql postgres
 ```
@@ -72,7 +72,7 @@ Quit the postgre REPL by typing ```\q```.
 ### Development Environment
 
 1. Clone our repository to your own directory.
-2. In the terminal, go to ```RecipeFilterAPI``` directory.
+2. In the terminal, go to ```api``` directory.
 3. Run ```bundle install```.
 4. Run ```rake db:create```.
 5. Run ```rake db:migrate```.
