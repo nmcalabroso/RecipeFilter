@@ -13,7 +13,8 @@ Rails.application.routes.draw do
         get '/count/:count/order/:order', to: 'recipes#batch', as: 'batch'
       end
 
-      resources :ingredients, except: [:new, :edit]
+      resources :ingredients, except: [:new, :edit, :show]
+      resources :steps, except: [:new, :edit, :show]
     end
   end
 

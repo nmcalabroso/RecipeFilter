@@ -3,7 +3,7 @@ class Api::RecipesController < Api::ApplicationController
 
   def index
     @recipes = Recipe.order(created_at: :desc).all
-    render json: @recipes, include: :ingredients, status: :ok
+    render json: @recipes, include: [:ingredients, :steps], status: :ok
   end
 
   def batch
