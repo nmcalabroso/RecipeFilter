@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  namespace :api, :defaults => {:format => :json} do
+  namespace :api, defaults: {format: :json} do
     resources :users, except: [:new, :edit] do
       collection do
         post '/login', to: 'user_sessions#create', as: 'login'
@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       collection do
         get '/count/:count/order/:order', to: 'recipes#batch', as: 'batch'
       end
+
+      resources :ingredients, except: [:new, :edit]
     end
   end
 
