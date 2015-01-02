@@ -8,7 +8,11 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :recipes, except: [:new, :edit]
+    resources :recipes, except: [:new, :edit] do
+      collection do
+        get '/count/:count/order/:order', to: 'recipes#batch', as: 'batch'
+      end
+    end
   end
 
   root 'static_pages#home'

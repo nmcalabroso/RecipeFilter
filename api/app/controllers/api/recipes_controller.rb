@@ -2,9 +2,20 @@ class Api::RecipesController < Api::ApplicationController
   before_filter :require_user, except: [:show, :index]
 
   def index
+    @recipes = Recipe.order(created_at: :desc).all
+    render json: @recipes, status: :ok
+  end
+
+  def batch
+    order = params[:order] || :desc
+    count = params[:count] || 20
+    @recipes = Recipe.order(created_at: order).limit(count)
+    render json: @recipes, status: :ok
   end
 
   def show
+    @recipe = Recipe.find(params[:id])
+    render json: @recipe, status: :ok
   end
 
   def create
@@ -22,7 +33,7 @@ class Api::RecipesController < Api::ApplicationController
       render json: {message: 'Recipe updated!'}, status: :ok
     else
       render json: {errors: @recipe.errors.full_messages},
-      status: :bad_request
+                    status: :bad_request
     end
   end
 
