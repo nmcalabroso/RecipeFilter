@@ -17,6 +17,13 @@ class Api::RecipesController < Api::ApplicationController
   end
 
   def update
+    @recipe = @current_user.recipes.find(params[:id])
+    if @recipe.update(recipe_params)
+      render json: {message: 'Recipe updated!'}, status: :ok
+    else
+      render json: {errors: @recipe.errors.full_messages},
+      status: :bad_request
+    end
   end
 
   def destroy
