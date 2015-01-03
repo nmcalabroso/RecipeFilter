@@ -99,15 +99,19 @@ sudo npm install -g bower           # package manager for front-end dependencies
 sudo npm install -g phantomjs       # for integration tests
 ```
 
-Clear the cache.
+### Development Environment
+
+Clear the cache and download the plugins.
 ```bash
 sudo npm cache clean
+sudo npm install
+bower install
 ```
-
-You can start the app using the following command.
+You can start the app using the following command. Visit your app at [http://localhost:4200](http://localhost:4200).
 ```bash
 ember serve                             # view on localhost:4200
 ```
+
 ### API Documentation
 Please see this [document](https://docs.google.com/spreadsheets/d/1Xxr3Op3GrXQ-Z8cwgBjLelSu1vRyhwFq4ivBjnlUlOA/edit?usp=sharing).
 
@@ -117,3 +121,8 @@ For a high quality and readable codebase, please make these conventions as refer
 
 1. Ruby Style Guide ```https://github.com/bbatsov/ruby-style-guide```
 2. Rails Style Guide ```https://github.com/bbatsov/rails-style-guide```
+
+For reference, here are the ember docs:
+* [ember.js](http://emberjs.com/)
+* [ember-cli](http://www.ember-cli.com/)
+
