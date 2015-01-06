@@ -10,7 +10,7 @@ Router.map(function() {
     path: "/"
   });
 
-  this.route("recipes")
+  this.route("recipes");
   this.route("edit");
   this.route("results");
   this.route("recipe");
