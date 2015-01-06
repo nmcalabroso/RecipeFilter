@@ -1,0 +1,21 @@
+<div class="jumbotron">
+    <h2>Create Recipe</h2><br>
+    <h3>Title</h3>
+    {{input type="text" value=title style="width:100%;" placeholder="Add Title..."}}
+    <br>
+
+    <h3>Description</h3>
+    {{textarea value=description id="description" rows="4" placeholder="Add Description..."}}
+    <br>
+
+    <h3>Ingredients</h3>
+    {{textarea value=ingredients style="width:100%;" rows="6" placeholder="Add Ingredients..."}}
+    <br>
+
+    <h3>Procedure</h3>
+    {{textarea  value=procedure style="width:100%;" rows="10" placeholder="Add Procedure..."}}
+    <br><br>
+
+    <button type="button" class="btn btn-primary" {{action "createRecipe"}}>Submit!</button>
+
+</div>
