@@ -15,7 +15,6 @@ export default Ember.Controller.extend({
               $('#login').modal('hide');
               self.transitionToRoute("/recipes");
           });
-          // console.log(typeof $.cookie("user_credentials"));
       }
     }
   }
