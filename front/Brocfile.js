@@ -22,6 +22,6 @@ app.import('bower_components/bootstrap-sass-official/assets/fonts/bootstrap/glyp
   destDir: 'fonts/bootstrap/'
 });
 
-// app.import('/public/jquery-cookie/jquery.cookie.js');
+app.import('vendor/jquery-cookie/jquery.cookie.js');
 
 module.exports = app.toTree();
