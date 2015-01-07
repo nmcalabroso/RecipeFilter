@@ -32,7 +32,25 @@ export default Ember.Controller.extend({
         }
        }); 
       }
-    }
-  },
+    },
 
+    signUp: function(){
+      var self = this;
+      var login = this.get('username');
+      var password = this.get('password');
+      var name = this.get('name');
+      var age = this.get('age');
+
+      if(!Ember.isEmpty(login) && !Ember.isEmpty(password)){
+        $.post(
+            '/api/users/',
+            {"user": {"login":login, "password":password, "name":name, "age":age}},
+            function(data){
+              self.set('isAuthenticated', true);
+              $('#signUp').modal('hide');
+              self.transitionToRoute("/recipes");
+          });
+      }
+    }
+  }
 });

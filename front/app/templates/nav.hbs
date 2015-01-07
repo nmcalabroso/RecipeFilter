@@ -35,25 +35,25 @@
         <form>
           <div class="form-group">
             <label for="name" class="control-label">Name</label>
-            <input type="text" class="form-control" id="name">
+            {{input type="text" class="form-control" id="name" valueBinding=name}}
           </div>
           <div class="form-group">
             <label for="age" class="control-label">Age</label>
-            <input type="number" class="form-control" id="age">
+            {{input type="number" class="form-control" id="age" valueBinding=age}}
           </div>
           <div class="form-group">
             <label for="newusername" class="control-label">Username</label>
-            <input type="text" class="form-control" id="newusername">
+            {{input type="text" class="form-control" id="newusername" valueBinding=newusername}}
           </div>
           <div class="form-group">
             <label for="newpassword" class="control-label">Password</label>
-            <input type="password" class="form-control" id="newpassword">
+            {{input type="password" class="form-control" id="newpassword" valueBinding=newpassword}}
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind.</button>
-        <a href="/login"><button type="button" class="btn btn-primary">Sign me up!</button></a>
+        <button type="button" class="btn btn-primary" {{action 'signUp'}}>Sign Up!</button>
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind.</button>
-        <a href="/recipes"><button type="button" class="btn btn-primary" {{action 'createSession'}}>Login!</button></a>
+        <button type="button" class="btn btn-primary" {{action 'createSession'}}>Login!</button>
       </div>
     </div>
   </div>
