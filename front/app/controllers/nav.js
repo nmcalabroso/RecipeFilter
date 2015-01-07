@@ -13,7 +13,6 @@ export default Ember.Controller.extend({
             '/api/users/login',
             {"user_session": {"login":login, "password":password}},
             function(data){
-
               var user = self.store.createRecord('user', {
                 login: true
               });

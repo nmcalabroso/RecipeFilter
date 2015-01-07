@@ -1,3 +1,8 @@
 /**
  * Override Bootstrap variables as needed in this file
  */
+
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+  padding-right: 15px;
+}
