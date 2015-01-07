@@ -13,6 +13,13 @@ export default Ember.Controller.extend({
             '/api/users/login',
             {"user_session": {"login":login, "password":password}},
             function(data){
+
+              var user = self.store.createRecord('user', {
+                login: true
+              });
+
+              user.save();
+
               self.set('isAuthenticated', true);
               $('#login').modal('hide');
               self.transitionToRoute("/recipes");
@@ -22,11 +29,15 @@ export default Ember.Controller.extend({
 
     destroySession: function(){
       var self = this;
+
       if(typeof $.cookie("user_credentials") !== undefined){
        $.ajax({
         url: '/api/users/logout',
         type: 'DELETE',
         success: function(data){
+          self.store.find('user').then(function(post){
+            post.destroyRecord();
+          });
           self.set('isAuthenticated', false);
           self.transitionToRoute('/');
         }
