@@ -29,12 +29,37 @@
         <li>Nullam ultrices ipsum neque. Nunc in posuere nunc, at accumsan risus.</li>
       </ol>
 
-      {{input type="text" placeholder="Add step."}}
-      <br><br>
+      <div id="add-steps">
+        <label for="steps" {{action "editStep" on="click"}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</label>
+        <br><br>
+        <label for="steps" {{action "editStep" on="click"}}>Nullam ultrices ipsum neque. Nunc in posuere nunc, at accumsan risus.</label>
+        <br><br>
+      </div>
 
+      {{textarea id="new-step" placeholder="Add step." rows=5 valueBinding=newStep value=newStep action="createStep"}}
+      <br><br>        
+      
 
     <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#procedure">Edit Procedure</button>
     <br><br>
     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete">Delete Recipe</button>
+  </div>
+</div>
+
+
+
+{{!-- Modals --}}
+
+<!-- Saved -->
+<div class="modal fade" id="saved">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Recipe saved!</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="/recipes"><button type="button" class="btn btn-primary" data-dismiss="modal">Cool!</button></a>
+      </div>
+    </div>
   </div>
 </div>
