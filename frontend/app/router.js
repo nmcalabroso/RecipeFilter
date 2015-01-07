@@ -6,14 +6,18 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  //Search
   this.resource("search", {
     path: "/"
   });
-
-  this.route("recipes")
-  this.route("edit");
   this.route("results");
   this.route("recipe");
+
+  // My Recipes
+  this.route("recipes");
+  this.route("create");
+  this.route("edit");
+
   this.route("login");
 });
 
