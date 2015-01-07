@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  isAuthenticated: false,
   actions: {
     createSession: function(){
       var self = this;
@@ -12,12 +13,13 @@ export default Ember.Controller.extend({
             '/api/users/login',
             {"user_session": {"login":login, "password":password}},
             function(data){
+              self.set('isAuthenticated', true);
               $('#login').modal('hide');
               self.transitionToRoute("/recipes");
           });
       }
     },
-    
+
     destroySession: function(){
       var self = this;
       if(typeof $.cookie("user_credentials") !== undefined){
@@ -25,6 +27,7 @@ export default Ember.Controller.extend({
         url: '/api/users/logout',
         type: 'DELETE',
         success: function(data){
+          self.set('isAuthenticated', false);
           self.transitionToRoute('/');
         }
        }); 

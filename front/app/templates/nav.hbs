@@ -7,12 +7,12 @@
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav navbar-nav navbar-right">
-        {{!-- {{#if isAuthenticated}} --}}
+        {{#if isAuthenticated}}
           <li><a href="" target="_blank" {{action "destroySession"}}>Logout</a></li>
-        {{!-- {{else}} --}}
+        {{else}}
           <li><a href="" target="_blank" data-toggle="modal" data-target="#signUp">Sign Up</a></li>
           <li><a href="" target="_blank" data-toggle="modal" data-target="#login">Login</a></li>
-        {{!-- {{/if}} --}}
+        {{/if}}
       </ul>
     </div>
   </div>
