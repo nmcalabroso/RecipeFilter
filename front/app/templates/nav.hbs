@@ -7,10 +7,84 @@
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="" target="_blank" data-toggle="modal" data-target="#signUp">Sign Up</a></li>
-        <li><a href="" target="_blank" data-toggle="modal" data-target="#login">Login</a></li>
-        <li><a href="" target="_blank" {{action "destroySession"}}>Logout</a></li>
+        {{!-- {{#if isAuthenticated}} --}}
+          <li><a href="" target="_blank" {{action "destroySession"}}>Logout</a></li>
+        {{!-- {{else}} --}}
+          <li><a href="" target="_blank" data-toggle="modal" data-target="#signUp">Sign Up</a></li>
+          <li><a href="" target="_blank" data-toggle="modal" data-target="#login">Login</a></li>
+        {{!-- {{/if}} --}}
       </ul>
     </div>
   </div>
 </nav>
+
+
+{{!-- Modals --}}
+
+<!-- SignUp -->
+<div class="modal fade" id="signUp">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Sign Up to Recipe Filter!</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name" class="control-label">Name</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="age" class="control-label">Age</label>
+            <input type="number" class="form-control" id="age">
+          </div>
+          <div class="form-group">
+            <label for="newusername" class="control-label">Username</label>
+            <input type="text" class="form-control" id="newusername">
+          </div>
+          <div class="form-group">
+            <label for="newpassword" class="control-label">Password</label>
+            <input type="password" class="form-control" id="newpassword">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind.</button>
+        <a href="/login"><button type="button" class="btn btn-primary">Sign me up!</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login -->
+<div class="modal fade" id="login">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Login to Recipe Filter!</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="username" class="control-label">Username</label>
+            {{input type="text" class="form-control" id="username" valueBinding="username"}}
+          </div>
+          <div class="form-group">
+            <label for="password" class="control-label">Password</label>
+            {{input type="password" class="form-control" id="password" valueBinding="password"}}
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind.</button>
+        <a href="/recipes"><button type="button" class="btn btn-primary" {{action 'createSession'}}>Login!</button></a>
+      </div>
+    </div>
+  </div>
+</div>
