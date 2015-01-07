@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
     resources :recipes, except: [:new, :edit] do
       collection do
-        get '/count/:count/order/:order', to: 'recipes#batch', as: 'batch'
+        get '/count/:count/order/:order', to: 'recipes#batch', as: :batch
+        get 'search', to: 'recipes#search', as: :search
       end
 
       resources :ingredients, except: [:new, :edit, :show]

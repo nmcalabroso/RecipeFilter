@@ -13,6 +13,15 @@ class Api::RecipesController < Api::ApplicationController
     render json: @recipes, status: :ok
   end
 
+  def search
+    with_ingredients = params[:with].downcase.split(',')
+    without_ingredients = params[:without].downcase.split(',')
+    order = params[:order] || :desc
+    count = params[:count] || 20
+    @recipes = Recipe.filter(with_ingredients, without_ingredients, order, count)
+    render json: @recipes, include: [:ingredients, :steps], status: :ok
+  end
+
   def show
     @recipe = Recipe.find(params[:id])
     render json: @recipe, status: :ok
