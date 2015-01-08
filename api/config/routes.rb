@@ -5,7 +5,12 @@ Rails.application.routes.draw do
       collection do
         post '/login', to: 'user_sessions#create', as: 'login'
         delete '/logout', to: 'user_sessions#destroy', as: 'logout'
+
       end
+    end
+
+    resource :user, only: [] do
+      get '/recipes', to: 'recipes#user_recipes', as: 'recipes'
     end
 
     resources :recipes, except: [:new, :edit] do

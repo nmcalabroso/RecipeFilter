@@ -22,6 +22,11 @@ class Api::RecipesController < Api::ApplicationController
     render json: @recipes, include: [:ingredients, :steps], status: :ok
   end
 
+  def user_recipes
+    @recipes = @current_user.recipes
+    render json: @recipes, include: [:ingredients, :steps], status: :ok
+  end
+
   def show
     @recipe = Recipe.find(params[:id])
     render json: @recipe, status: :ok
