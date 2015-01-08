@@ -11,6 +11,7 @@ export default Ember.Route.extend({
       data.forEach(function(sample){
         console.log(sample);
         var recipe = self.store.createRecord('recipe', {
+          recipe_id: sample.id,
           name: sample.name,
           description: sample.description
         });

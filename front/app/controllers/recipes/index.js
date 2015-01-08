@@ -20,7 +20,7 @@ export default Ember.ArrayController.extend({
         // save record
         var recipe = self.store.createRecord('recipe', {
           name: name,
-          description: description
+          description: description,
         });
 
         recipe.save();

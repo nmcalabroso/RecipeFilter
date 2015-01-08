@@ -5,7 +5,10 @@
   <br/><br>
   <div id="myrecipes">
     {{#each recipe in model}}
-      <h4><a href="/recipes/edit">{{recipe.name}}</a></h4>
+      {{!-- <h4><a href="/recipes/edit/">{{recipe.name}}</a></h4> --}}
+      <h4>
+        {{#link-to "recipes.edit" recipe.recipe_id}} {{recipe.name}}{{/link-to}}
+      </h4>
       <h4><small>{{recipe.description}}</small></h4>
       <br>
     {{/each}}
