@@ -11,7 +11,7 @@ class Api::StepsController < Api::ApplicationController
     @recipe = @current_user.recipes.find(params[:recipe_id])
 
     if @recipe.steps.create(step_params)
-      render json: {message: 'Step added!'}, status: :created
+      render json: @recipe.steps.last, status: :created
     else
       render json: {errors: @recipe.steps.errors.full_messages},
                     status: :bad_request
@@ -35,7 +35,7 @@ class Api::StepsController < Api::ApplicationController
     @step = @recipe.steps.find(params[:id])
 
     if @step.update(step_params)
-      render json: {message: 'Step updated!'}, status: :ok
+      render json: @step, status: :ok
     else
       render json: {errors: @step.errors.full_messages},
       status: :bad_request
