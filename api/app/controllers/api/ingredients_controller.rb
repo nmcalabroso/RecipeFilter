@@ -11,7 +11,7 @@ class Api::IngredientsController < Api::ApplicationController
     @recipe = @current_user.recipes.find(params[:recipe_id])
 
     if @recipe.ingredients.create(ingredient_params)
-        render json: {message: 'Ingredient added!'}, status: :created
+        render json: @recipe.ingredients.last, status: :created
     else
         render json: {errors: @recipe.ingredients.errors.full_messages},
                status: :bad_request
@@ -35,7 +35,7 @@ class Api::IngredientsController < Api::ApplicationController
     @ingredient = @recipe.ingredients.find(params[:id])
 
     if @ingredient.update(ingredient_params)
-      render json: {message: 'Ingredient updated!'}, status: :ok
+      render json: @ingredient, status: :ok
     else
       render json: {errors: @ingredient.errors.full_messages},
       status: :bad_request
