@@ -29,7 +29,9 @@ class Api::RecipesController < Api::ApplicationController
 
   def create
     if @current_user.recipes.create(recipe_params)
-      render json: {message: 'Recipe created!'}, status: :created
+      render json: @current_user.recipes.last,
+                   include: [:ingredients, :steps],
+                   status: :created
     else
       render json: {errors: @current_user.errors.full_messages},
                     status: :unprocessable_entity
