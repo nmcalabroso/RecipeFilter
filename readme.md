@@ -107,13 +107,25 @@ sudo npm cache clean
 sudo npm install
 bower install
 ```
-You can start the app using the following command. Visit your app at [http://localhost:4200](http://localhost:4200).
-```bash
-ember serve                             # view on localhost:4200
-```
 
 ### API Documentation
 Please see this [document](https://docs.google.com/spreadsheets/d/1Xxr3Op3GrXQ-Z8cwgBjLelSu1vRyhwFq4ivBjnlUlOA/edit?usp=sharing).
+
+### Starting the App
+
+After setting everything up, go to the ```api``` directory and start the rails app.
+```bash
+cd path/to/RecipeFilter/api
+rails s
+```
+
+Open another terminal tab and go to the ```front``` directory. Start the ember app with a proxy.
+```bash
+cd path/to/RecipeFilter/api
+ember serve --proxy http://localhost:3000
+```
+
+You can visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Further Notes
 
