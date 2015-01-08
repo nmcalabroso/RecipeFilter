@@ -3,11 +3,13 @@
   <br/>
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createRecipe">Create Recipe</button>
   <br/><br>
-  {{#each recipe in model}}
-    <h4><a href="/recipes/edit">{{recipe.name}}</a></h4>
-    <h4><small>{{recipe.description}}</small></h4>
-    <br>
-  {{/each}}
+  <div id="myrecipes">
+    {{#each recipe in model}}
+      <h4><a href="/recipes/edit">{{recipe.name}}</a></h4>
+      <h4><small>{{recipe.description}}</small></h4>
+      <br>
+    {{/each}}
+  </div>
 </div>
 
 {{!-- Modals --}}
